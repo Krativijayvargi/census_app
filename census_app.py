@@ -66,13 +66,13 @@ if 'Pie Chart' in plot_list:
   data = census_df['income'].value_counts()
   plt.figure(figsize=(10,5))
   plt.title('Pie Chart')
-  plt.pie(data,labels=data.index)
+  plt.pie(data,labels=data.index,autopct='%.2f%%',explode=[0.16,0.15])
   st.pyplot()
 
   data_gender = census_df['gender'].value_counts()
   plt.figure(figsize=(10,5))
   plt.title('Pie Chart')
-  plt.pie(data_gender,labels=data.index)
+  plt.pie(data_gender,labels=data.index,autopct='%.2f%%',explode=[0.16,0.15])
   st.pyplot()
 # Display box plot using matplotlib module and 'st.pyplot()'
 if 'Box Plot' in plot_list:
